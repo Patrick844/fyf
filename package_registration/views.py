@@ -18,7 +18,7 @@ from django.conf import settings
 
 def BookRegistration(request, pk):
 
-    accomodations = Accomodation.objects.all()
+    accomodations = Accomodation.objects.all().order_by("name")
     rooms = Room.objects.all()
 
     entry_level = DiveType.objects.filter(level="Entry-Level")

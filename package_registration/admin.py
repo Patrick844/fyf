@@ -3,9 +3,9 @@ from .models import Accomodation, DiveType, Equipement, Package, Reservation, Re
 
 
 class DiveTypeAdmin(admin.ModelAdmin):
-    list_display = ["name", "price", "level"]
-    list_display_links = ["name"]
-    list_editable = ["price", "level"]
+    list_display = ["pk", "name", "price", "level"]
+    list_display_links = ["pk"]
+    list_editable = ["name", "price", "level"]
 
 
 class HotelAdmin(admin.ModelAdmin):
