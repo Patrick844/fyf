@@ -1,0 +1,5 @@
+    Hotel Booking Confirmed
+
+    Dear {{ firstname }}, your hotel has been confirmed at {{ hotel_name }} 
+
+    and check your reservation here

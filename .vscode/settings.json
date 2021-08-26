@@ -1,0 +1,13 @@
+{
+  "python.pythonPath": "fyf/bin/python",
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "autopep8",
+  "python.linting.enabled": true,
+  "python.linting.lintOnSave": true,
+  "zenMode.centerLayout": true,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "editor.minimap.enabled": true,
+  "git.ignoreLimitWarning": true
+}

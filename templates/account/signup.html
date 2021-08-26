@@ -1,0 +1,95 @@
+{% extends 'base_login.html' %} {% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+<title>Sign Up</title>
+{% endblock title%} {% block links %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i%7cPermanent+Marker"
+  rel="stylesheet" />
+<link href="{% static 'css/theme.css' %}" rel="stylesheet" type="text/css" media="all" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script>
+  $(document).ready(function () {
+
+    $('#id_phone_number_1').keypress(function (e) {
+
+      var charCode = (e.which) ? e.which : event.keyCode
+
+      if (String.fromCharCode(charCode).match(/[^0-9]/g))
+
+        return false;
+
+    });
+
+
+
+
+
+  });
+</script>
+{% endblock links %}
+
+
+
+
+
+{% block content %}
+<section class="height-100">
+  <img src={% static 'images/bg_login.jpg' %} alt="Image" class="bg-image">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-7">
+        <div class="card py-3 shadow-lg w-auto">
+          <div class="card-body">
+            <h1 class="h2 text-center mb-5">Create Account</h1>
+            <div class="text-left">
+              <form method="POST" action="" class="form-floating">
+                {% csrf_token %}
+                {{form|crispy}}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                {% if form.errors %}
+                {% for field in form %}
+                {% for error in field.errors %}
+                <p class="bg-danger text-white p-3"> {{ error }} </p>
+                {% endfor %}
+                {% endfor %}
+                {% endif %}
+
+                <button class="btn btn-block btn-lg btn-primary" type="submit">Signup</button>
+              </form>
+              <div>
+
+                <div class="text-center text-small mt-3">
+                  <span>Already have an account?
+                    <a href="{% url 'account_login' %}">Log in here</a></span>
+                  </br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span> <a class="h3 text-white font-weight-bold" href="{% url 'landing:home' %}">Go back to home page
+          </a></span>
+      </div>
+</section>
+{% endblock content %} {% block script %}
+
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+  integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+  integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+{% endblock script %}

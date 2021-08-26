@@ -1,0 +1,326 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Overhead Environments</title>
+{% endblock title%}
+{% block links %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+
+<style>
+  .ie-panel {
+    display: none;
+    background: #212121;
+    padding: 10px 0;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+    clear: both;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  ,
+  html.ie-10 .ie-panel,
+  html.lt-ie-10 .ie-panel {
+    display: block;
+  }
+
+  ,
+  li.advlist {
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+  }
+</style>
+
+{% endblock links %}
+{% block content %}
+<!-- Base typography-->
+<section class="section section-sm section-fluid bg-default">
+  <div class="container">
+
+  </div>
+  <!-- Owl Carousel-->
+  <div class="owl-carousel owl-classic owl-timeline" data-items="1" data-md-items="2" data-lg-items="3"
+    data-xl-items="4" data-margin="30" data-autoplay="false" data-nav="true" data-dots="true">
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/leb_food.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/leb_food.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/leb_food.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_1.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_1.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_1.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_2.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_2.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_2.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_3.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_3.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_3.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_4.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_4.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_4.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_5.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_5.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_5.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section section-sm section-first bg-default text-left">
+  <div class="container">
+    <div class="row row-40 flex-lg-row-reverse justify-content-xl-center">
+      <div class="col-xl-7">
+        <ul class="list-xl box-typography">
+          <li>
+
+            <h1>Overhead Environments</h1>
+            <p>Divers love to explore and while most divers are content to confine their diving to the open water,
+              allowing direct access to the surface at all times, others love the thrill of discovering new places far
+              from the surface. Undersea caves, abandoned mines, under the ice and inside shipwrecks are all popular
+              destinations for these intrepid explorers who go beyond the bounds of recreational diving.
+            </p>
+            <p>If this type of exploration appeals to you, then NAUI training programs for overhead environments is for
+              you! Take a look at the list of NAUI programs and contact your local NAUI Instructor for additional
+              information.
+            </p>
+
+            </p>
+            <h1 class="mt-5">Cavern Diver</h1>
+            <p>The NAUI Cavern Diver course provides you with the fundamental skills and knowledge needed for cavern
+              diving at depths not exceeding 100 fsw (30 msw) and at a combined depth and distance penetration not
+              exceeding 200 feet (61 meters) from the surface. Participants will become proficient in the use of lines
+              reels while handling a light, team and line placement, zero visibility/touch contact communications while
+              following a line, as well as many other skills that are necessary to be a competent Cavern Diver.
+            </p>
+
+            <h1 class="mt-5">Cave Diver (Levels I & II)</h1>
+            <p>Does the thought of diving through an underwater cave intrigue you? Are you fascinated by the possibility
+              of diving where few divers go? The NAUI Cave Diver Levels I and II courses build on skills and knowledge
+              taught in the Cavern Diver course. Upon successful completion of the NAUI Cave Diver Level I course, you
+              are qualified to plan and execute limited-penetration, simple navigation, no-decompression cave dives to
+              depths that do not exceed 100 fsw (30 msw). NAUI Cave Diver Level II are qualified to plan and execute
+              longer penetration cave dives with staged cylinders involving complex navigation to depths that do not
+              exceed 130 fsw (40 msw).
+            </p>
+
+            <h1 class="mt-5">Cave Guide (Technical Support Leader)</h1>
+            <p>The NAUI Cave Guide course provides you with the skills and knowledge needed to plan and execute guided
+              tours in caverns and caves. As a Cave Guide, your responsibilities might include escorting stressed
+              diver(s) out of a cave system, repairing broken guide lines, as well as assuring that all guided divers
+              are out of the cave after completion of a dive.
+            </p>
+
+            <h1 class="mt-5">Wreck Penetration Diver</h1>
+            <p>The NAUI Wreck Penetration Diver course provides you with the skills and knowledge needed to minimize
+              risks in penetration wreck diving at depths not exceeding 130 fsw (40 msw). Wreck penetration diving is
+              any diving inside a sunken vessel, aircraft, or similar structure. Learn about the safety hazards and
+              special risks of overhead environments, gas management, entanglement, limited visibility, NAUI Technical
+              Equipment Configuration (NTEC), specialized equipment utilized in wreck penetration diving, search
+              methods, underwater navigation, legal aspects, artifacts, treasure, salvage, archaeology, and more.
+            </p>
+
+            <h1 class="mt-5">Mine Diver (Levels I and II)</h1>
+            <p>Mine divers explore abandoned and flooded mine shafts left from bygone days when a particular site was an
+              active mining operation. The NAUI Mine Diver Level I and Level II courses teaches the specific skills and
+              knowledge needed to gain experience and minimize risk during mine diving operations. Level I Mine Divers
+              are qualified to penetrate to a maximum depth of 100 feet (30 meters) with simple navigation while
+              observing no-decompression limits. Level II Mine Divers are qualified to plan and execute longer
+              penetration mine dives with staged cylinders involving complex navigation to depths that do not exceed 130
+              feet (40 meters).
+            </p>
+
+
+            <h1 class="mt-5">Prerequisites for Entering the Course</h1>
+            <p>Minimum age for NAUI Technical training programs is 18 years of age. Additional training and experience
+              requirements vary for each course. A qualified NAUI Instructor can evaluate your experience and answer
+              questions about your readiness to pursue specific training. </p>
+
+            <div class="group-md group-middle"><a
+                class="button button-width-xl-230 button-primary button-pipaluk d-none" href="#">Get in touch</a><a
+                class="button button-black-outline button-md" href="#">Contact Us</a><a
+                class="button button-width-xl-230 button-primary button-pipaluk d-none" href="#">Get in touch</a><a
+                class="button button-black-outline button-md" href={% url 'landing:courses' %}>Back to Courses</a></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- HTML Text Elements-->
+
+
+<!-- Lists and Blockquote-->
+<footer class="section footer-corporate context-dark">
+  <div class="footer-corporate-inset">
+    <div class="container">
+      <div class="row row-40 justify-content-lg-between">
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+
+              <ul class="footer-contacts d-inline-block d-sm-block">
+                <li>
+                  <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                    <div class="unit-body"><a class="link-phone" href="tel:#">+961 1-480-087</a></div>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                    <div class="unit-body"><a class="link-aemail"
+                        href="mailto:#">info@aquaventurescubaacademy-lb.com</a></div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                    <div class="unit-body"><a class="link-location" href="coming_soon.html">Bacha Gardens 1st Floor,
+                        NAUI office, Hazmieh, Lebanon</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="rd-navbar-brand">
+                      <!--Brand-->
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInDown" data-wow-delay="0s">
+              <form>
+                <h6 class="text-spacing-100 text-uppercase">Write us a feedback</h6>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                      placeholder="name@example.com">
+                  </div>
+                </article>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                    <div class="group-md group-middle justify-content-sm-start"><button
+                        class="button button-lg button-primary button-ujarak" href="coming_soon.html"
+                        type="submit">Submit</button></div>
+
+                  </div>
+                </article>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-corporate-bottom-panel">
+    <div class="container">
+      <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+        <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+          <div>
+            <ul class="list-inline list-inline-sm footer-social-list-2">
+              <li><a class="icon fa fa-facebook" href="#"></a></li>
+              <li><a class="icon fa fa-twitter" href="#"></a></li>
+              <li><a class="icon fa fa-google-plus" href="#"></a></li>
+              <li><a class="icon fa fa-instagram" href="https://www.instagram.com/findyourfinsinlebanon/"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 order-sm-first">
+          <!-- Rights-->
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Find
+              Your Fins</span>. All Rights Reserved. Design by Patrick Saade</p>
+        </div>
+        <div class="col-sm-6 col-md-4 text-md-right">
+          <p class="rights"><a href="#">Privacy Policy</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock content %}
+{% block script %}
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+  integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+  integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+{% endblock script %}

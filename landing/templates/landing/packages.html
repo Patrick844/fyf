@@ -1,0 +1,539 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<title>Packages</title>
+{% endblock title%}
+{% block links %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+
+<style>
+  .ie-panel {
+    display: none;
+    background: #212121;
+    padding: 10px 0;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+    clear: both;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  html.ie-10 .ie-panel,
+  html.lt-ie-10 .ie-panel {
+    display: block;
+  }
+</style>
+
+{% endblock links %}
+
+
+
+{% block content %}
+<!-- Breadcrumbs -->
+<section class="breadcrumbs-custom-inset">
+  <div class="breadcrumbs-custom context-dark bg-overlay-60">
+    <div class="container">
+      <h2 class="breadcrumbs-custom-title"><strong>Basic Package</strong></h2>
+    </div>
+    <div class="box-position" style="background-image:url(/static/images/pckg1.jpg);"></div>
+  </div>
+</section>
+<!-- Why choose us-->
+<section class="section section-sm section-first bg-default text-md-left">
+  <div class="container">
+    <div class="row row-50 justify-content-center align-items-xl-center">
+      <div class="col-md-10 col-lg-5 col-xl-6"><img src="{% static 'images/diving_pckg1.jpg' %}" alt="" width="519"
+          height="564" />
+      </div>
+      <div class="col-md-10 col-lg-7 col-xl-6">
+        <h1 class="text-spacing-25 font-weight-normal">Basic Package</h1>
+        <div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk d-none"
+            href="#">Get in touch</a><a class="button button-black-outline button-md"
+            href={% url 'packages:package-registration' 1 %}>Purchase Package</a></div>
+        <!-- Bootstrap tabs-->
+        <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-4">
+          <!-- Nav tabs-->
+          <ul class="nav nav-tabs">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-4-1"
+                data-toggle="tab">Experience</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-4-2" data-toggle="tab">Skills</a>
+            </li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-4-3" data-toggle="tab">Mission</a>
+            </li>
+          </ul>
+          <!-- Tab panes-->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tabs-4-1">
+              <p>We offer you the best Lebanon has to offer including :</p>
+              <p class="text-danger"> This package is for one person, if you are a group please check the Tailor made
+                package below</p>
+              <ul>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong>6 nights / 7 days</strong></li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong>4 diving days / 2 dives per
+                    day</strong> (lunch included)</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Chose your accomodation with breakfast
+                  included</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Customize your own experience</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong> One</strong> excurtion to one of
+                  Lebanon famous landmark of your choie (lunch included)</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Weights and Tanks included</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Transport from and to the airport</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Transport from and to Landemarks and dive
+                  sites</li>
+
+              </ul>
+              <!-- Linear progress bar-->
+
+            </div>
+            <div class="tab-pane fade" id="tabs-4-2">
+              <div class="row row-40 justify-content-center text-center inset-top-10">
+                <strong>Our guide are certified divers from NAUI that will acompagny you througout your stay in Lebanon.
+                  From divers to best tour guide they will show you the best Lebanon has to offer in terms of dive
+                  sites, landemarks and food</strong>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tabs-4-3">
+              <p>By chosing this package your experience with us will be tailormade you will be able to choose between
+                different options listed below <strong>(Please note that if you need a special request your request will
+                  be pending until we review it and update it in your account)</strong> : </p>
+              <div class="text-center text-sm-left offset-top-30 tab-height">
+                <ul class="row-16 list-0 list-custom list-marked list-marked-sm list-marked-secondary">
+                  <li>Accomodation</li>
+                  <li>Equipements</li>
+                  <li>Type of dives</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="breadcrumbs-custom-inset mt-4">
+  <div class="breadcrumbs-custom context-dark bg-overlay-60">
+    <div class="container">
+      <h2 class="breadcrumbs-custom-title"><strong>Premium Package</strong></h2>
+    </div>
+    <div class="box-position" style="background-image: url(static/images/pckg2.jpg);"></div>
+  </div>
+</section>
+<!-- Why choose us-->
+<section class="section section-sm section-first bg-default text-md-left">
+  <div class="container">
+    <div class="row row-50 justify-content-center align-items-xl-center">
+      <div class="col-md-10 col-lg-5 col-xl-6"><img src="{% static 'images/pckg2_diving.jpg' %}" alt="" width="519"
+          height="564" />
+      </div>
+      <div class="col-md-10 col-lg-7 col-xl-6">
+        <h1 class="text-spacing-25 font-weight-normal">Premium Package</h1>
+        <div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk d-none"
+            href="#">Get in touch</a><a class="button button-black-outline button-md"
+            href="{% url 'packages:package-registration' 2 %}">Purchase Package</a>
+        </div>
+        <!-- Bootstrap tabs-->
+        <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-5">
+          <!-- Nav tabs-->
+          <ul class="nav nav-tabs">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-5-1"
+                data-toggle="tab">Experience</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-5-2" data-toggle="tab">Skills</a>
+            </li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-5-3" data-toggle="tab">Mission</a>
+            </li>
+          </ul>
+          <!-- Tab panes-->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tabs-5-1">
+              <p>We offer you the best Lebanon has to offer including :</p>
+              <p class="text-danger"> This package is for one person, if you are a group please check the Tailor made
+                package below</p>
+              <ul>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong>12 nights / 13 days</strong></li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong>9 diving days / 2 dives per
+                    day</strong> (lunch included)</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Choose your accomodation with breakfast
+                  included</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Customize your own experience</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong>Multiple</strong> excurtion to one
+                  of Lebanon famous landmark of your choie (lunch included)</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Weights and Tanks included</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Transport from and to the airport</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Transport from and to Landemarks and dive
+                  sites</li>
+
+              </ul>
+              <!-- Linear progress bar-->
+            </div>
+            <div class="tab-pane fade" id="tabs-5-2">
+              <div class="row row-40 justify-content-center text-center inset-top-10">
+                <strong>Our guide are certified divers from NAUI that will acompagny you througout your stay in Lebanon.
+                  From divers to best tour guide they will show you the best Lebanon has to offer in terms of dive
+                  sites, landemarks and food</strong>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tabs-5-3">
+              <p>By chosing this package your experience with us will be tailormade you will be able to chose between
+                different options listed below <strong>(Please note that if you need a special request your request will
+                  be pending until we review it and update it in your account)</strong> : </p>
+              <div class="text-center text-sm-left offset-top-30 tab-height">
+                <ul class="row-16 list-0 list-custom list-marked list-marked-sm list-marked-secondary">
+                  <li>Accomodation</li>
+                  <li>Equipements</li>
+                  <li>Type of dives</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="breadcrumbs-custom-inset mt-4">
+  <div class="breadcrumbs-custom context-dark bg-overlay-60">
+    <div class="container">
+      <h2 class="breadcrumbs-custom-title"><strong>TailorMade Package</strong></h2>
+    </div>
+    <div class="box-position" style="background-image: url(static/images/pckg3.jpg);"></div>
+  </div>
+</section>
+<!-- Why choose us-->
+<section class="section section-sm section-first bg-default text-md-left">
+  <div class="container">
+    <div class="row row-50 justify-content-center align-items-xl-center">
+      <div class="col-md-10 col-lg-5 col-xl-6"><img src="{% static 'images/underwater.jpg' %}" alt="" width="519"
+          height="564" />
+      </div>
+      <div class="col-md-10 col-lg-7 col-xl-6">
+        <h1 class="text-spacing-25 font-weight-normal">TailorMade Package</h1>
+        <div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk d-none"
+            href="#">Get in touch</a><a class="button button-black-outline button-md" href="#">Contact Us</a></div>
+        <!-- Bootstrap tabs-->
+        <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-6">
+          <!-- Nav tabs-->
+          <ul class="nav nav-tabs">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-6-1"
+                data-toggle="tab">Experience</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-6-2" data-toggle="tab">Skills</a>
+            </li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-6-3" data-toggle="tab">Mission</a>
+            </li>
+          </ul>
+          <!-- Tab panes-->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tabs-6-1">
+              <p>We offer you the best Lebanon has to offer including :</p>
+              <ul>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong>12 nights / 13 days</strong></li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong>9 diving days / 2 dives per
+                    day</strong> (lunch included)</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Choose your accomodation with breakfast
+                  included</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Customize your own experience</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i><strong>Multiple</strong> excurtion to one
+                  of Lebanon famous landmark of your choie (lunch included)</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Weights and Tanks included</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Transport from and to the airport</li>
+                <li><i class="fa-check fa-1x p-2" style="color: green;"></i>Transport from and to Landemarks and dive
+                  sites</li>
+
+              </ul>
+              <!-- Linear progress bar-->
+            </div>
+            <div class="tab-pane fade" id="tabs-6-2">
+              <div class="row row-40 justify-content-center text-center inset-top-10">
+                <strong>Our guide are certified divers from NAUI that will acompagny you througout your stay in Lebanon.
+                  From divers to best tour guide they will show you the best Lebanon has to offer in terms of dive
+                  sites, landemarks and food</strong>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tabs-6-3">
+              <p>By chosing this package your experience with us will be tailormade you will be able to chose between
+                different options listed below <strong>(Please note that if you need a special request your request will
+                  be pending until we review it and update it in your account)</strong> : </p>
+              <div class="text-center text-sm-left offset-top-30 tab-height">
+                <ul class="row-16 list-0 list-custom list-marked list-marked-sm list-marked-secondary">
+                  <li>Accomodation</li>
+                  <li>Equipements</li>
+                  <li>Type of dives</li>
+                  <li>Special Requests</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Latest Projects-->
+<section class="section section-sm section-fluid bg-default">
+  <div class="container">
+    <h3>Gallery</h3>
+  </div>
+  <!-- Owl Carousel-->
+  <div class="owl-carousel owl-classic owl-timeline" data-items="1" data-md-items="2" data-lg-items="3"
+    data-xl-items="4" data-margin="30" data-autoplay="false" data-nav="true" data-dots="true">
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/leb_food.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/leb_food.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/leb_food.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_1.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_1.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_1.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_2.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_2.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_2.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_3.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_3.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_3.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_4.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_4.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_4.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_5.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_5.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_5.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- What people Say-->
+<section class="section section-sm section-last bg-default">
+  <div class="container">
+    <h3>What People Say</h3>
+    <!-- Owl Carousel-->
+    <div class="owl-carousel owl-modern" data-items="1" data-stage-padding="15" data-margin="30" data-dots="true"
+      data-animation-in="fadeIn" data-animation-out="fadeOut" data-autoplay="true">
+      <!-- Quote Lisa-->
+      <article class="quote-lisa">
+        <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles"
+              src="images/user-16-100x100.jpg" alt="" width="100" height="100" /></a>
+          <div class="quote-lisa-text">
+            <p class="q">Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Diam phasellus vestibulum lorem
+              sed risus ultricies. Aenean et tortor at risus viverra adipiscing. Aliquet enim tortor at auctor urna.
+              Tortor aliquam nulla facilisi cras fermentum. Malesuada pellentesque elit eget gravida cum sociis natoque.
+            </p>
+          </div>
+          <h5 class="quote-lisa-cite"><a href="#">Catherine Williams</a></h5>
+          <p class="quote-lisa-status">Regular Client</p>
+        </div>
+      </article>
+      <!-- Quote Lisa-->
+      <article class="quote-lisa">
+        <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles"
+              src="images/user-17-100x100.jpg" alt="" width="100" height="100" /></a>
+          <div class="quote-lisa-text">
+            <p class="q">Sodales ut etiam sit amet nisl purus. Maecenas accumsan lacus vel facilisis volutpat est.
+              Suscipit adipiscing bibendum est ultricies integer quis auctor. Viverra aliquet eget sit amet tellus cras
+              adipiscing. Posuere ac ut consequat semper viverra nam libero justo laoreet. Iaculis eu non diam phasellus
+              vestibulum lorem sed risus ultricies.</p>
+          </div>
+          <h5 class="quote-lisa-cite"><a href="#">Rupert Wood</a></h5>
+          <p class="quote-lisa-status">Regular Client</p>
+        </div>
+      </article>
+      <!-- Quote Lisa-->
+      <article class="quote-lisa">
+        <div class="quote-lisa-body"><a class="quote-lisa-figure" href="#"><img class="img-circles"
+              src="images/user-18-100x100.jpg" alt="" width="100" height="100" /></a>
+          <div class="quote-lisa-text">
+            <p class="q">Lacus vestibulum sed arcu non odio euismod lacinia. Pellentesque elit ullamcorper dignissim
+              cras. Ultrices eros in cursus turpis massa tincidunt dui. Nunc pulvinar sapien et ligula ullamcorper
+              malesuada proin. Commodo odio aenean sed adipiscing diam. Sed euismod nisi porta lorem mollis aliquam.</p>
+          </div>
+          <h5 class="quote-lisa-cite"><a href="#">Samantha Brown</a></h5>
+          <p class="quote-lisa-status">Regular Client</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!--Counters-->
+<!-- Counter Classic-->
+
+<!-- Page Footer-->
+<!-- Page Footer-->
+<footer class="section footer-corporate context-dark">
+  <div class="footer-corporate-inset">
+    <div class="container">
+      <div class="row row-40 justify-content-lg-between">
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+
+              <ul class="footer-contacts d-inline-block d-sm-block">
+                <li>
+                  <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                    <div class="unit-body"><a class="link-phone" href="tel:#">+961 1-480-087</a></div>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                    <div class="unit-body"><a class="link-aemail"
+                        href="mailto:#">info@aquaventurescubaacademy-lb.com</a></div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                    <div class="unit-body"><a class="link-location" href="coming_soon.html">Bacha Gardens 1st Floor,
+                        NAUI office, Hazmieh, Lebanon</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="rd-navbar-brand">
+                      <!--Brand-->
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInDown" data-wow-delay="0s">
+              <form>
+                <h6 class="text-spacing-100 text-uppercase">Write us a feedback</h6>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                      placeholder="name@example.com">
+                  </div>
+                </article>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                    <div class="group-md group-middle justify-content-sm-start"><button
+                        class="button button-lg button-primary button-ujarak" href="coming_soon.html"
+                        type="submit">Submit</button></div>
+
+                  </div>
+                </article>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-corporate-bottom-panel">
+    <div class="container">
+      <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+        <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+          <div>
+            <ul class="list-inline list-inline-sm footer-social-list-2">
+              <li><a class="icon fa fa-facebook" href="#"></a></li>
+              <li><a class="icon fa fa-twitter" href="#"></a></li>
+              <li><a class="icon fa fa-google-plus" href="#"></a></li>
+              <li><a class="icon fa fa-instagram" href="https://www.instagram.com/findyourfinsinlebanon/"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 order-sm-first">
+          <!-- Rights-->
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Find
+              Your Fins</span>. All Rights Reserved. Design by Patrick Saade</p>
+        </div>
+        <div class="col-sm-6 col-md-4 text-md-right">
+          <p class="rights"><a href="#">Privacy Policy</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+{% endblock content %}
+{% block script %}
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+  integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+  integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+{% endblock script %}

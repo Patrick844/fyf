@@ -1,0 +1,279 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Instructor Trainer</title>
+{% endblock title%}
+{% block links %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+
+<style>
+  .ie-panel {
+    display: none;
+    background: #212121;
+    padding: 10px 0;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+    clear: both;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  ,
+  html.ie-10 .ie-panel,
+  html.lt-ie-10 .ie-panel {
+    display: block;
+  }
+
+  ,
+  li.advlist {
+    font-size: 14px;
+    margin-left: 10px;
+    list-style-type: circle;
+  }
+</style>
+
+{% endblock links %}
+{% block content %}
+<!-- Base typography-->
+<section class="section section-sm section-fluid bg-default">
+  <div class="container">
+
+  </div>
+  <!-- Owl Carousel-->
+  <div class="owl-carousel owl-classic owl-timeline" data-items="1" data-md-items="2" data-lg-items="3"
+    data-xl-items="4" data-margin="30" data-autoplay="false" data-nav="true" data-dots="true">
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/leb_food.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/leb_food.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/leb_food.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_1.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_1.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_1.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_2.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_2.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_2.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_3.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_3.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_3.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_4.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_4.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_4.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+    <div class="owl-item">
+      <!-- Thumbnail Classic-->
+      <article class="thumbnail thumbnail-mary">
+        <div class="thumbnail-mary-figure"><img src="{% static 'images/pckg_img/gallery_5.jpg' %}" alt="" width="420"
+            height="308" />
+        </div>
+        <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60"
+            href="{% static 'images/pckg_img/gallery_5.jpg' %}" data-lightgallery="item"><img
+              src="{% static 'images/pckg_img/gallery_5.jpg' %}" alt="" width="420" height="308" /></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="section section-sm section-first bg-default text-left">
+  <div class="container">
+    <div class="row row-40 flex-lg-row-reverse justify-content-xl-center">
+      <div class="col-xl-7">
+        <ul class="list-xl box-typography">
+          <li>
+
+            <h1>Instructor Trainer</h1>
+            <p><strong>The Instructor Trainer</strong> designation is a formal NAUI leadership designation, not a
+              certification. The NAUI Instructor Trainer designation (IT) provides recognition to NAUI Instructors who
+              have completed a combination of training and evaluated experience specific to the preparing, training,
+              evaluating and counseling of NAUI Instructor candidates
+            </p>
+
+
+            <h1 class="mt-5">Prerequisites for Entering the Course</h1>
+            <p>Minimum age is 21 years by the water phase of the course. Any active-status NAUI Instructor who has
+              completed a NAUI Staff Training Workshop, logged a minimum of 200 logged open water scuba dives, conducted
+              and registered at least 150 scuba certifications of which at least 25% are continuing education and
+              leadership courses, and staffed/participated in 3 ITCs (ITP/IQP) for at least 100 student contact hours
+              are eligible to attend an Instructor Trainer Workshop (ITW). </p>
+
+            <div class="group-md group-middle"><a
+                class="button button-width-xl-230 button-primary button-pipaluk d-none" href="#">Get in touch</a><a
+                class="button button-black-outline button-md" href="#">Contact Us</a><a
+                class="button button-width-xl-230 button-primary button-pipaluk d-none" href="#">Get in touch</a><a
+                class="button button-black-outline button-md" href={% url 'landing:courses' %}>Back to Courses</a></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- HTML Text Elements-->
+
+
+<!-- Lists and Blockquote-->
+<footer class="section footer-corporate context-dark">
+  <div class="footer-corporate-inset">
+    <div class="container">
+      <div class="row row-40 justify-content-lg-between">
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+
+              <ul class="footer-contacts d-inline-block d-sm-block">
+                <li>
+                  <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                    <div class="unit-body"><a class="link-phone" href="tel:#">+961 1-480-087</a></div>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                    <div class="unit-body"><a class="link-aemail"
+                        href="mailto:#">info@aquaventurescubaacademy-lb.com</a></div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                    <div class="unit-body"><a class="link-location" href="coming_soon.html">Bacha Gardens 1st Floor,
+                        NAUI office, Hazmieh, Lebanon</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="rd-navbar-brand">
+                      <!--Brand-->
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInDown" data-wow-delay="0s">
+              <form>
+                <h6 class="text-spacing-100 text-uppercase">Write us a feedback</h6>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                      placeholder="name@example.com">
+                  </div>
+                </article>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                    <div class="group-md group-middle justify-content-sm-start"><button
+                        class="button button-lg button-primary button-ujarak" href="coming_soon.html"
+                        type="submit">Submit</button></div>
+
+                  </div>
+                </article>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-corporate-bottom-panel">
+    <div class="container">
+      <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+        <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+          <div>
+            <ul class="list-inline list-inline-sm footer-social-list-2">
+              <li><a class="icon fa fa-facebook" href="#"></a></li>
+              <li><a class="icon fa fa-twitter" href="#"></a></li>
+              <li><a class="icon fa fa-google-plus" href="#"></a></li>
+              <li><a class="icon fa fa-instagram" href="https://www.instagram.com/findyourfinsinlebanon/"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 order-sm-first">
+          <!-- Rights-->
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Find
+              Your Fins</span>. All Rights Reserved. Design by Patrick Saade</p>
+        </div>
+        <div class="col-sm-6 col-md-4 text-md-right">
+          <p class="rights"><a href="#">Privacy Policy</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endblock content %}
+{% block script %}
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+  integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+  integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+{% endblock script %}

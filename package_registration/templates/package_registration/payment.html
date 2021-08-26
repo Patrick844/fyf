@@ -1,0 +1,216 @@
+{% extends 'base_registration.html' %}
+{% load static %}
+
+{% block title %}<title>Payment information</title>{% endblock title %}
+{% block links %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i%7cPermanent+Marker"
+    rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="{% static 'css/theme.css' %}" rel="stylesheet" type="text/css" media="all" />
+
+<style>
+    .checkbox-lg .custom-control-label::before,
+    .checkbox-lg .custom-control-label::after {
+        top: .8rem;
+        width: 1.55rem;
+        height: 1.55rem;
+    }
+
+    .checkbox-lg .custom-control-label {
+        padding-top: 13px;
+        padding-left: 6px;
+    }
+
+
+    .checkbox-xl .custom-control-label::before,
+    .checkbox-xl .custom-control-label::after {
+        top: 1.2rem;
+        width: 1.85rem;
+        height: 1.85rem;
+    }
+
+    .checkbox-xl .custom-control-label {
+        padding-top: 23px;
+        padding-left: 10px;
+    }
+
+
+    .rounded {
+        border-radius: 1rem
+    }
+
+    .nav-pills .nav-link {
+        color: #555
+    }
+
+    .nav-pills .nav-link.active {
+        color: white
+    }
+
+    input[type="radio"] {
+        margin-right: 5px
+    }
+
+    .bold {
+        font-weight: bold
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+</script>
+{% endblock links %}
+
+{% block content %}
+<section class="height-100 bg-gradient-3">
+    <div class="position-absolute text-center sticky-top w-100 p-3">
+        <a href="{% url 'landing:packages' %}" class="h3 text-white">
+            Go back to packages selection
+        </a>
+    </div>
+    <img alt="Image" class="bg-image opacity-10">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-9 col-lg-10">
+                <form class="wizard card" method="POST" , action="">
+                    {% csrf_token %}
+                    <ul class="nav nav-tabs card-header text-center bg-light p-0">
+                        <li class="nav-item flex-fill">
+                            <a class="nav-link" href="#first">6. Payment</a>
+                        </li>
+
+
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="first">
+                            <div class="card-body py-4">
+                                <div class="text-center">
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm mb-3 mb-sm-0 justify-content-center text-center">
+
+                                        <!--Grid row-->
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="cc-name">Name on card</label>
+                                                <input type="text" class="form-control" id="cc-name" placeholder=""
+                                                    required>
+                                                <small class="text-muted">Full name as displayed
+                                                    on card</small>
+                                                <div class="invalid-feedback">
+                                                    Name on card is required
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="cc-number">Credit card
+                                                    number</label>
+                                                <input type="text" class="form-control" id="cc-number" placeholder=""
+                                                    required>
+                                                <div class="invalid-feedback">
+                                                    Credit card number is required
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 mb-3">
+                                                <label for="cc-expiration">Expiration</label>
+                                                <input type="text" class="form-control" id="cc-expiration"
+                                                    placeholder="" required>
+                                                <div class="invalid-feedback">
+                                                    Expiration date required
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <label for="cc-expiration">CVV</label>
+                                                <input type="text" class="form-control" id="cc-cvv" placeholder=""
+                                                    required>
+                                                <div class="invalid-feedback">
+                                                    Security code required
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to
+                                            checkout</button>
+
+                </form>
+
+
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+    </div>
+
+    <div class="card-footer text-center">
+        <small class="text-white">Having trouble filling out this form?
+            <a href="#" class="font-weight-bold">Contact Support</a>
+        </small>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+
+
+
+{% endblock content %}
+{% block script %}
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous">
+</script>
+<script type="text/javascript" src="{% static '/js/jquery.min.js' %}"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="{% static '/js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/prism.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/smooth-scroll.polyfills.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/scrollMonitor.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/bootstrap.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/clipboard.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/jquery.countdown.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/flickity.pkgd.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/isotope.pkgd.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/jquery.smartWizard.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/jquery.fancybox.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/jquery.ui.totop.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/jquery.ui.totop.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/jquery.ui.totop.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/zoom.min.js' %}"></script>
+<script type="text/javascript" src="{% static '/js/theme.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+{% endblock script %}
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed</title>
+</head>
+
+<body>
+    <h1 style="color: red;">Hotel Booking Confirmed</h1>
+
+    Dear {{ firstname }}, your hotel has been confirmed at <a href='{{ website }}'>{{ hotel_name }}</a>
+
+    and check your reservation <a href="http://127.0.0.1:8000/user/orders/{{pk}}">here</a>
+</body>
+
+</html>

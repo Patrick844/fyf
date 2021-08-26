@@ -1,0 +1,445 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %}
+<title>Courses</title>
+{% endblock title%}
+{% block links %}
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+<link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+  .ie-panel {
+    display: none;
+    background: #212121;
+    padding: 10px 0;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
+    clear: both;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  html.ie-10 .ie-panel,
+  html.lt-ie-10 .ie-panel {
+    display: block;
+  }
+</style>
+
+{% endblock links %}
+
+{% block navbar %}
+<ul class="rd-navbar-nav">
+  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'landing:home' %}">Home</a>
+  </li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'landing:packages' %}">Packages</a>
+  </li>
+  <li class="rd-nav-item active"><a class="rd-nav-link" href="{% url 'landing:courses' %}">Courses</a>
+  </li>
+  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'landing:coming-soon' %}">FAQ</a>
+  </li>
+  {% if request.user.is_authenticated %}
+  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'landing:coming-soon' %}"> Orders</a>
+  </li>
+  {% endif %}
+  <li class="rd-nav-item"><a class="rd-nav-link" href="{% url 'landing:coming-soon' %}">Contact Us</a>
+  </li>
+</ul>
+{% endblock navbar %}
+
+{% block content %}
+<!-- Breadcrumbs -->
+<section class="breadcrumbs-custom-inset">
+  <div class="breadcrumbs-custom context-dark bg-overlay-60">
+    <div class="container">
+      <h2 class="breadcrumbs-custom-title"><strong>Courses</strong></h2>
+    </div>
+    <div class="box-position" style="background-image:url(/static/images/courses_header.jpg);"></div>
+  </div>
+</section>
+<!-- Courses-->
+<section class="section section-sm section-first bg-default text-md-left">
+  <div class="container">
+    <div class="row row-50 justify-content-center align-items-xl-center">
+      <div class="col-md-10 col-lg-5 col-xl-6"><img src="{% static 'imgcourses/me_beginner.jpg' %}" alt="" width="519"
+          height="564" />
+      </div>
+      <div class="col-md-10 col-lg-7 col-xl-6">
+        <h1 class="text-spacing-25 font-weight-normal">Divers NAUI Courses and Certifications</h1>
+        <div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk d-none"
+            href="#">Get in touch</a><a class="button button-black-outline button-md" href="#">Contact Us</a></div>
+        <!-- Bootstrap tabs-->
+        <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-9">
+          <!-- Nav tabs-->
+          <ul class="nav nav-tabs">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-9-1"
+                data-toggle="tab">Description</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-9-2" data-toggle="tab">Courses</a>
+            </li>
+          </ul>
+          <!-- Tab panes-->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tabs-9-1">
+              <p>It’s a world of striking beauty, with strange and colorful creatures in a weightless seascape. An
+                unfamiliar place where every visit is an adventure and discovery!
+              </p>
+              <p>Divers are members of a special community, where they can meet new people and share the knowledge they
+                gain. Scuba will reveal new sites and new experiences, an up-close and personal encounter with marine
+                life.
+
+              </p>
+
+              <p>Scuba doesn't end with entry-level certification. As you gain confidence, you will be able to take more
+                advanced course work that enables you to explore new environments.
+
+
+              </p>
+
+
+              <!-- Linear progress bar-->
+
+            </div>
+            <div class="tab-pane fade" id="tabs-9-2">
+              <div class="row row-40 justify-content-center text-center inset-top-10">
+                <div class="list-group">
+                  <a class="list-group-item list-group-item-action-item-info" href="{% url 'courses:open-water' %}">Open
+                    Water</a>
+                  <a class="list-group-item list-group-item-action-item-info" href="{% url 'courses:nitrox' %}">Enriched
+                    Air Nitrox (EANx) Diver</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:advanced' %}">Advanced Scuba Diver</a>
+                  <a class="list-group-item list-group-item-action-item-info" href="{% url 'courses:rescue' %}">Rescue
+                    Scuba Diver</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:master-scuba' %}">Master Scuba Diver</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:aid-course' %}">First Aid Courses</a>
+
+                  <div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+<section class="section section-sm section-first bg-default text-md-left">
+  <div class="container">
+    <div class="row row-50 justify-content-center align-items-xl-center">
+      <div class="col-md-10 col-lg-5 col-xl-6"><img src="{% static 'imgcourses/speciality_course.jpg' %}" alt=""
+          width="519" height="564" />
+      </div>
+      <div class="col-md-10 col-lg-7 col-xl-6">
+        <h1 class="text-spacing-25 font-weight-normal">Speciality NAUI Courses and Certifications</h1>
+        <div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk d-none"
+            href="#">Get in touch</a><a class="button button-black-outline button-md" href="#">Contact Us</a></div>
+        <!-- Bootstrap tabs-->
+        <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-5">
+          <!-- Nav tabs-->
+          <ul class="nav nav-tabs">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-5-1"
+                data-toggle="tab">Description</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-5-2" data-toggle="tab">Courses</a>
+            </li>
+          </ul>
+          <!-- Tab panes-->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tabs-5-1">
+              <p>NAUI training continues far beyond the basics! NAUI Instructors teach a wide range of specialized types
+                of diving. Courses include underwater archaeology, rescue training, night diving, deep diving, digital
+                imaging, search & recovery, public safety diving, and much more. Just about any area of underwater
+                interest is taught in a NAUI Specialty course. Join the fun and continue diving today!</p>
+
+
+
+              <!-- Linear progress bar-->
+
+            </div>
+            <div class="tab-pane fade" id="tabs-5-2">
+              <div class="row row-40 justify-content-center text-center inset-top-10">
+                <div class="list-group">
+                  <a class="list-group-item list-group-item-action-item-info" href="{% url 'courses:full-face' %}">Full
+                    Face Mask</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:public-safety' %}">Public Safety Diver</a>
+                  <a class="list-group-item list-group-item-action-item-info" href="{% url 'courses:hunter' %}">Lionfish
+                    Hunter</a>
+
+                  <div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+<section class="section section-sm section-first bg-default text-md-left">
+  <div class="container">
+    <div class="row row-50 justify-content-center align-items-xl-center">
+      <div class="col-md-10 col-lg-5 col-xl-6"><img src="{% static 'images/diving_pckg1.jpg' %}" alt="" width="519"
+          height="564" />
+      </div>
+      <div class="col-md-10 col-lg-7 col-xl-6">
+        <h1 class="text-spacing-25 font-weight-normal">Leadership NAUI courses and certifications </h1>
+        <div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk d-none"
+            href="#">Get in touch</a><a class="button button-black-outline button-md" href="#">Contact Us</a></div>
+        <!-- Bootstrap tabs-->
+        <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-6">
+          <!-- Nav tabs-->
+          <ul class="nav nav-tabs">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-6-1"
+                data-toggle="tab">Description</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-6-2" data-toggle="tab">Courses</a>
+            </li>
+          </ul>
+          <!-- Tab panes-->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tabs-6-1">
+              <h3 class="text-color-danger">NAUI Progression of Leadership Training (Leadership and Instructor Levels)
+              </h3>
+              <p>The minimum age is 18 years for all leadership programs. Certifications as a NAUI Open Water Scuba
+                Diver, NAUI Rescue Scuba Diver, NAUI Nitrox Diver, NAUI Master Scuba Diver, NAUI First Aid for the
+                Diving Professional, NAUI Oxygen Provider (or equivalent) are required. The Skin Diving Instructor
+                certification (formerly Skin Diving Leader) has long been unique to NAUI. It qualifies individuals to
+                train and certify skin divers and conduct snorkeling experience programs. Certification as a NAUI Skin
+                or Open Water Scuba Diver or the equivalent is a prerequisite for this program.
+              </p>
+
+
+              <p>The program includes both instruction and evaluation. Enrollees receive the information needed to
+                prepare for NAUI membership and NAUI leadership training. Participants are given knowledge, water skill
+                and other performance evaluations, critiques and counseling to ensure they are aware of their state of
+                preparedness for NAUI membership and continued leadership training.
+              </p>
+
+
+              <!-- Linear progress bar-->
+
+            </div>
+            <div class="tab-pane fade" id="tabs-6-2">
+              <div class="row row-40 justify-content-center text-center inset-top-10">
+                <div class="list-group">
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:divemaster' %}">Divemaster</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:instructor' %}">Instructor</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:instructor-crossover' %}">Instructor Crossover</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:instructor-trainer' %}">Instructor Trainer</a>
+                  <a class="list-group-item list-group-item-action-item-info" href="{% url 'courses:director' %}">Course
+                    Director</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:fa-instructor' %}">First Aid Instructor</a>
+                  <div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+<section class="section section-sm section-first bg-default text-md-left">
+  <div class="container">
+    <div class="row row-50 justify-content-center align-items-xl-center">
+      <div class="col-md-10 col-lg-5 col-xl-6"><img src="{% static 'imgcourses/DVP.jpg' %}" alt="" width="519"
+          height="564" />
+      </div>
+      <div class="col-md-10 col-lg-7 col-xl-6">
+        <h1 class="text-spacing-25 font-weight-normal">Technical NAUI courses and certifications</h1>
+        <div class="group-md group-middle"><a class="button button-width-xl-230 button-primary button-pipaluk d-none"
+            href="#">Get in touch</a><a class="button button-black-outline button-md" href="#">Contact Us</a></div>
+        <!-- Bootstrap tabs-->
+        <div class="tabs-custom tabs-horizontal tabs-line" id="tabs-7">
+          <!-- Nav tabs-->
+          <ul class="nav nav-tabs">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tabs-7-1"
+                data-toggle="tab">Description</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tabs-7-2" data-toggle="tab">Courses</a>
+            </li>
+          </ul>
+          <!-- Tab panes-->
+          <div class="tab-content">
+            <div class="tab-pane fade show active" id="tabs-7-1">
+              <p><strong>Technical diving</strong> is a form of scuba diving that exceeds the typical recreational
+                limits imposed on depth and immersion time (bottom time). Tec diving involves accelerated decompression
+                and/or the use of variable gas mixtures during a dive. Therefore, this advanced method of diving
+                requires additional experience, training and equipment.
+              </p>
+              <p>NAUI has long understood that its members crave deeper exploration and unspoiled aquatic life available
+                beyond the recreational discipline. Hence, NAUI started the Technical Diving Division in 1997 with the
+                goal of creating a higher standard of training. NAUI's training policies assure divers the highest
+                instructor quality in order to provide the skills, knowledge and training required to manage this
+                advanced level of diving, all while minimizing risk.
+              </p>
+
+
+
+              <!-- Linear progress bar-->
+
+            </div>
+            <div class="tab-pane fade" id="tabs-7-2">
+              <div class="row row-40 justify-content-center text-center inset-top-10">
+                <div class="list-group">
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:intro-tech' %}">Introduction to Technical Diving Skills</a>
+                  <a class="list-group-item list-group-item-action-item-info" href="{% url 'courses:mixed-gas' %}">Mixed
+                    Gas and Decompression Diving</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:rebreather' %}">Rebreather Diving</a>
+                  <a class="list-group-item list-group-item-action-item-info"
+                    href="{% url 'courses:overhead' %}">Overhead Environments</a>
+                  <a class="list-group-item list-group-item-action-item-info" href="{% url 'courses:DVP' %}">Diver
+                    Propulsion Vehicule (DPV)</a>
+                  <div>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+
+
+<!--Counters-->
+<!-- Counter Classic-->
+
+<!-- Page Footer-->
+<!-- Page Footer-->
+<footer class="section footer-corporate context-dark">
+  <div class="footer-corporate-inset">
+    <div class="container">
+      <div class="row row-40 justify-content-lg-between">
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+
+              <ul class="footer-contacts d-inline-block d-sm-block">
+                <li>
+                  <h6 class="text-spacing-100 text-uppercase">Contact us</h6>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-phone"></span></div>
+                    <div class="unit-body"><a class="link-phone" href="tel:#">+961 1-480-087</a></div>
+                  </div>
+
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
+                    <div class="unit-body"><a class="link-aemail"
+                        href="mailto:#">info@aquaventurescubaacademy-lb.com</a></div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="unit">
+                    <div class="unit-left"><span class="icon fa fa-location-arrow"></span></div>
+                    <div class="unit-body"><a class="link-location" href="coming_soon.html">Bacha Gardens 1st Floor,
+                        NAUI office, Hazmieh, Lebanon</a></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="unit">
+                    <div class="rd-navbar-brand">
+                      <!--Brand-->
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-12 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInRight" data-wow-delay="0s">
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-5 col-lg-3 col-xl-4">
+          <div class="oh-desktop">
+            <div class="wow slideInDown" data-wow-delay="0s">
+              <form>
+                <h6 class="text-spacing-100 text-uppercase">Write us a feedback</h6>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                      placeholder="name@example.com">
+                  </div>
+                </article>
+                <!-- Post Minimal 2-->
+                <article class="post post-minimal-2">
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1"></textarea>
+                    <div class="group-md group-middle justify-content-sm-start"><button
+                        class="button button-lg button-primary button-ujarak" href="coming_soon.html"
+                        type="submit">Submit</button></div>
+
+                  </div>
+                </article>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-corporate-bottom-panel">
+    <div class="container">
+      <div class="row justfy-content-xl-space-berween row-10 align-items-md-center2">
+        <div class="col-sm-6 col-md-4 text-sm-right text-md-center">
+          <div>
+            <ul class="list-inline list-inline-sm footer-social-list-2">
+              <li><a class="icon fa fa-facebook" href="#"></a></li>
+              <li><a class="icon fa fa-twitter" href="#"></a></li>
+              <li><a class="icon fa fa-google-plus" href="#"></a></li>
+              <li><a class="icon fa fa-instagram" href="https://www.instagram.com/findyourfinsinlebanon/"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 order-sm-first">
+          <!-- Rights-->
+          <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Find
+              Your Fins</span>. All Rights Reserved. Design by Patrick Saade</p>
+        </div>
+        <div class="col-sm-6 col-md-4 text-md-right">
+          <p class="rights"><a href="#">Privacy Policy</a></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- Global Mailform Output-->
+<div class="snackbars" id="form-output-global"></div>
+{% endblock content %}
+{% block script %}
+<script src="{% static 'js/core.min.js' %}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+  integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+  integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+
+{% endblock script %}
