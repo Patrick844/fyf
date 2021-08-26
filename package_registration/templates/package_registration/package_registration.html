@@ -235,6 +235,7 @@
 
                                             <div class="dropdown m-6">
                                                 <label for="accomodations">Choose your accomodation:</label>
+                                                </br>
                                                 <select id="accomodations" name="accomodations">
                                                     {% for accomodation in accomodations %}
 
@@ -259,6 +260,7 @@
                                             <! –– Room ––>
                                                 <div class="dropdown m-6">
                                                     <label for="rooms">Choose your room:</label>
+                                                    </br>
                                                     <select id="rooms" name="rooms" disabled>
                                                         {% for room in rooms %}
                                                         {% ifnotequal room.name "None" %}
