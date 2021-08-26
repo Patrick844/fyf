@@ -233,7 +233,7 @@
 
                                         <! –– ACCOMODATION ––>
 
-                                            <div class="m-6">
+                                            <div class="dropdown m-6">
                                                 <label for="accomodations">Choose your accomodation:</label>
                                                 <select id="accomodations" name="accomodations">
                                                     {% for accomodation in accomodations %}
@@ -252,11 +252,12 @@
                                                 </select>
                                             </div>
 
-
-
+                                            </br>
+                                            <hr>
+                                            </br>
 
                                             <! –– Room ––>
-                                                <div class="m-6">
+                                                <div class="dropdown m-6">
                                                     <label for="rooms">Choose your room:</label>
                                                     <select id="rooms" name="rooms" disabled>
                                                         {% for room in rooms %}
