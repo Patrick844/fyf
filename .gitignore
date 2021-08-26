@@ -114,6 +114,7 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+.env
 
 static_root
 media_root
