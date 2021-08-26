@@ -1,3 +1,2 @@
-web: gunicorn fyf.wsgi
-release: python manage.py makemigrations
+web: gunicorn fyfproject.wsgi
 release: python manage.py migrate
